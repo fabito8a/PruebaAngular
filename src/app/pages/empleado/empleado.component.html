@@ -1,0 +1,100 @@
+
+<h1>Empleado <small>Nombre del Empleado</small> </h1>
+<hr>
+
+
+<div class="row text-right">
+  <div class="col">
+    <button class="btn btn-danger"
+            routerLink="/empleados">
+      <i class="fa fa-arrow-left"></i>
+      Regresar
+    </button>
+  </div>
+</div>
+
+
+
+<div class="row animated fadeIn faster">
+  <div class="col">
+
+    <form (ngSubmit)="guardar( f )"
+          #f="ngForm">
+
+      <div class="form-group">
+        <label>Firebase ID</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Firebase ID"
+               [(ngModel)]="empleado.id"
+               name="id"
+               disabled="disabled">
+        <small class="form-text text-muted">Este campo es autogenerado</small>
+      </div>
+
+
+      <div class="form-group">
+          <label>Name</label>
+          <input type="text"
+                 class="form-control"
+                 placeholder="Name"
+                 [(ngModel)]="empleado.name"
+                 name="name"
+                 [class.is-invalid]="name.invalid && name.touched"
+                 #name="ngModel"
+                 required>
+      </div>
+
+      <div class="form-group">
+          <label>LastName</label>
+          <input type="text"
+                 class="form-control"
+                 name="lastname"
+                 [(ngModel)]="empleado.lastname"
+                 placeholder="LastName"
+                 [class.is-invalid]="lastname.invalid && lastname.touched"
+                 #lastname="ngModel"
+                 required>
+      </div>
+
+      <div class="form-group">
+          <label>Birthdate</label>
+          <input type="date"
+                 class="form-control"
+                 name="birthdate"
+                 [(ngModel)]="empleado.birthdate"
+                 placeholder="birthdate"
+                 [class.is-invalid]="birthdate.invalid && birthdate.touched"
+                 #birthdate="ngModel"
+                 required>
+      </div>
+
+      <div class="form-group">
+          <label>Pay</label>
+          <input type="text"
+                 class="form-control"
+                 name="pay"
+                 [(ngModel)]="empleado.pay"
+                 placeholder="pay"
+                 [class.is-invalid]="pay.invalid && pay.touched"
+                 #pay="ngModel"
+                 required>
+      </div>
+
+      <hr>
+      <div class="form-group text-center">
+        <button type="submit"
+                class="btn btn-primary w-25">
+          <i class="fa fa-save"></i>
+          Guardar
+        </button>
+      </div>
+
+
+    </form>
+
+
+  </div>
+</div>
+
+

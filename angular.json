@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "crudAngular"
+    }
+  },
+  "defaultProject": "crudAngular",
+  "cli": {
+    "analytics": "1a4e8406-b442-4037-8182-1183a3ad6e02"
+  }
 }
